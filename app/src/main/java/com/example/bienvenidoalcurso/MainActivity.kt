@@ -55,7 +55,6 @@ import com.example.bienvenidoalcurso.ui.theme.BienvenidoAlCursoTheme
 import androidx.compose.ui.graphics.Color
 import androidx.compose.foundation.border
 
-
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -77,7 +76,28 @@ fun AllComponents() {
             .padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
-
+        item {
+            Text("【 SECCIÓN 1 】 SURFACE + CARD + TEXT + SPACER", fontSize = 16.sp, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.primary)
+        }
+        item {
+            Surface(
+                modifier = Modifier.fillMaxWidth(),
+                shape = RoundedCornerShape(12.dp),
+                color = MaterialTheme.colorScheme.surfaceVariant
+            ) {
+                Column(modifier = Modifier.padding(12.dp)) {
+                    Card(
+                        shape = RoundedCornerShape(8.dp),
+                        modifier = Modifier
+                            .border(2.dp, Color.Blue, RoundedCornerShape(8.dp))
+                    ) {
+                        Text("¡Bienvenido a mi App!",modifier = Modifier.padding(16.dp),fontSize = 18.sp )
+                    }
+                    Spacer(modifier = Modifier.height(12.dp))
+                    Text("Texto dentro de Surface - Ejemplo de Spacer")
+                }
+            }
+        }
 
         item {
             Text("【 SECCIÓN 2 】 LAZYROW", fontSize = 16.sp, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.primary)
@@ -204,7 +224,7 @@ fun AllComponents() {
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Image(
-                    painter = painterResource(id = R.drawable.tecsup),
+                    painter = painterResource(id = R.drawable.ic_launcher_foreground),
                     contentDescription = "Imagen",
                     modifier = Modifier.size(60.dp)
                 )
@@ -233,7 +253,7 @@ fun AllComponents() {
         }
 
         item {
-            Text("【 SECCIÓN 11 】 FLOWROW + FLOWCOLUMN", fontSize = 16.sp, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.primary)
+            Text("【 SECCIÓN 10 】 FLOWROW + FLOWCOLUMN", fontSize = 16.sp, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.primary)
         }
         item {
             Column {
@@ -255,7 +275,7 @@ fun AllComponents() {
         }
 
         item {
-            Text("【 SECCIÓN 13 】 BOTTOMNAVIGATION", fontSize = 16.sp, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.primary)
+            Text("【 SECCIÓN 11 】 BOTTOMNAVIGATION", fontSize = 16.sp, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.primary)
         }
         item {
             Row(
@@ -277,7 +297,7 @@ fun AllComponents() {
         }
 
         item {
-            Text("【 SECCIÓN 14 】 NAVIGATIONRAIL", fontSize = 16.sp, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.primary)
+            Text("【 SECCIÓN 12 】 NAVIGATIONRAIL", fontSize = 16.sp, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.primary)
         }
         item {
             Row(
